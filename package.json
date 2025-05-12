@@ -1,0 +1,42 @@
+{
+  "name": "@5cover/eslint-plugin-content",
+  "version": "0.0.0",
+  "description": "ESLint plugins to enforce the content of your code rather than form",
+  "keywords": [
+    "eslint",
+    "eslintplugin",
+    "eslint-plugin"
+  ],
+  "author": "5cover",
+  "main": "./lib/index.js",
+  "exports": "./lib/index.js",
+  "files": [
+    "lib"
+  ],
+  "type": "module",
+  "scripts": {
+    "lint": "npm-run-all \"lint:*\"",
+    "lint:eslint-docs": "npm-run-all \"update:eslint-docs -- --check\"",
+    "lint:js": "eslint .",
+    "test": "mocha tests --recursive",
+    "update:eslint-docs": "eslint-doc-generator"
+  },
+  "homepage": "https://github.com/5cover/eslint-plugin-content",
+  "repository": "5cover/eslint-plugin-content",
+  "devDependencies": {
+    "@eslint/js": "^9.0.0",
+    "eslint": "^9.26.0",
+    "eslint-doc-generator": "^2.0.0",
+    "eslint-plugin-eslint-plugin": "^6.0.0",
+    "eslint-plugin-n": "^17.0.0",
+    "mocha": "^11.0.0",
+    "npm-run-all2": "^6.1.2"
+  },
+  "engines": {
+    "node": "^18.18.0 || ^20.9.0 || >=21.1.0"
+  },
+  "peerDependencies": {
+    "eslint": ">=9.0.0"
+  },
+  "license": "MIT"
+}
