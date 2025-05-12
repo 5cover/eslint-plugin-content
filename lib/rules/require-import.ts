@@ -1,8 +1,9 @@
-// rules/require-import.js
-
 /**
  * @fileoverview Enforce importing a specific module
+ * @author 5cover
  */
+
+import type { Rule } from 'eslint';
 
 export default {
     meta: {
@@ -29,8 +30,8 @@ export default {
         },
     },
     create(context) {
-        const option = context.options[0] || {};
-        const moduleName = option.moduleName;
+        const option = (context.options as Record<string, unknown>[])[0];
+        const moduleName = option?.moduleName;
         if (typeof moduleName !== 'string' || moduleName.length === 0) {
             // If the rule isn't configured correctly, don't do anything.
             return {};
@@ -61,4 +62,4 @@ export default {
             },
         };
     },
-};
+} satisfies Rule.RuleModule;

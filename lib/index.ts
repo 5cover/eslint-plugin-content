@@ -8,13 +8,13 @@
 //------------------------------------------------------------------------------
 
 import requireImport from './rules/require-import.js';
-import pkg from '../package.json' with { type: 'json' };
+import pkg from '../package.json';
+import type { ESLint } from 'eslint';
 
 //------------------------------------------------------------------------------
 // Plugin Definition
 //------------------------------------------------------------------------------
 
-// import all rules in lib/rules
 export default {
     meta: {
         name: pkg.name,
@@ -23,5 +23,4 @@ export default {
     rules: {
         'require-import': requireImport,
     },
-};
-
+} satisfies ESLint.Plugin;

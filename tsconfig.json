@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    // Base Options recommended for all projects
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "target": "es6",
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "moduleResolution": "node",
+    "moduleDetection": "force",
+    "isolatedModules": true,
+    "verbatimModuleSyntax": true,
+    // Enable strict type checking so you can catch bugs early
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
+    "noImplicitAny": true,
+    // Transpile our TypeScript code to JavaScript
+    "module": "ES2020",
+    "outDir": "dist",
+    // Emit type declarations
+    "declaration": true,
+    "lib": [
+      "ES2020"
+    ]
+  },
+  // Include the necessary files for your project
+  "include": [
+    "**/*.ts"
+, "tests/lib/rules/require-import.test.ts"  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+  ]
+}
