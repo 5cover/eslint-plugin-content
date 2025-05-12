@@ -49,14 +49,14 @@ export default [
 ];
 ```
 
-## Configurations
-
-<!-- begin auto-generated configs list -->
-TODO: Run eslint-doc-generator to generate the configs list (or delete this section if no configs are offered).
-<!-- end auto-generated configs list -->
-
 ## Rules
 
 <!-- begin auto-generated rules list -->
-TODO: Run eslint-doc-generator to generate the rules list.
+
+🔧 Automatically fixable by the [`--fix` CLI option](https://eslint.org/docs/user-guide/command-line-interface#--fix).
+
+| Name                                                           | Description                                | 🔧 |
+| :------------------------------------------------------------- | :----------------------------------------- | :- |
+| [@5cover/require-import](docs/rules/@5cover/require-import.md) | require an import from a particular module | 🔧 |
+
 <!-- end auto-generated rules list -->

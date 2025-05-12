@@ -1,29 +1,6 @@
 {
-  "name": "@5cover/eslint-plugin-content",
-  "version": "1.0.0",
-  "description": "ESLint plugins to enforce the content of your code rather than form",
-  "keywords": [
-    "eslint",
-    "eslintplugin",
-    "eslint-plugin"
-  ],
   "author": "5cover",
-  "main": "./lib/index.js",
-  "exports": "./lib/index.js",
-  "files": [
-    "lib"
-  ],
-  "private": false,
-  "type": "module",
-  "scripts": {
-    "lint": "npm-run-all \"lint:*\"",
-    "lint:eslint-docs": "npm-run-all \"update:eslint-docs -- --check\"",
-    "lint:js": "eslint .",
-    "test": "mocha tests --recursive",
-    "update:eslint-docs": "eslint-doc-generator"
-  },
-  "homepage": "https://github.com/5cover/eslint-plugin-content",
-  "repository": "5cover/eslint-plugin-content",
+  "description": "ESLint plugins to enforce the content of your code rather than form",
   "devDependencies": {
     "@eslint/js": "^9.0.0",
     "eslint": "^9.26.0",
@@ -36,8 +13,34 @@
   "engines": {
     "node": "^18.18.0 || ^20.9.0 || >=21.1.0"
   },
+  "exports": "./lib/index.js",
+  "files": [
+    "lib"
+  ],
+  "homepage": "https://github.com/5cover/eslint-plugin-content",
+  "keywords": [
+    "eslint",
+    "eslintplugin",
+    "eslint-plugin"
+  ],
+  "license": "MIT",
+  "main": "./lib/index.js",
+  "name": "@5cover/eslint-plugin-content",
   "peerDependencies": {
     "eslint": ">=9.0.0"
   },
-  "license": "MIT"
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/5cover/eslint-plugin-content.git"
+  },
+  "scripts": {
+    "lint": "npm-run-all \"lint:*\"",
+    "lint:eslint-docs": "npm-run-all \"update:eslint-docs -- --check\"",
+    "lint:js": "eslint .",
+    "test": "mocha tests --recursive",
+    "update:eslint-docs": "eslint-doc-generator"
+  },
+  "type": "module",
+  "version": "1.0.0"
 }

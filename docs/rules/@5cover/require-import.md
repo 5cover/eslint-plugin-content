@@ -1,4 +1,8 @@
-# `require-import` Rule
+# Require an import from a particular module (`@5cover/content/@5cover/require-import`)
+
+🔧 This rule is automatically fixable by the [`--fix` CLI option](https://eslint.org/docs/latest/user-guide/command-line-interface#--fix).
+
+<!-- end auto-generated rule header -->
 
 Enforces that a specific module is always imported in your files. If the import is missing, ESLint will report an error and can automatically insert the import statement at the top of the file.
 
@@ -9,13 +13,15 @@ Enforces that a specific module is always imported in your files. If the import 
 * **Fixable**: yes (`code`)
 * **Configuration**: requires a single option, `moduleName`
 
-## Rule Options
+## Options
 
-The rule takes one object argument:
+<!-- begin auto-generated rule options list -->
 
-| Property   | Type     | Required | Description                          |
-| ---------- | -------- | -------- | ------------------------------------ |
-| moduleName | `string` | yes      | Name of the module to enforce import |
+| Name         | Type   |
+| :----------- | :----- |
+| `moduleName` | String |
+
+<!-- end auto-generated rule options list -->
 
 Example:
 
