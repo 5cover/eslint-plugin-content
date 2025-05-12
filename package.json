@@ -1,6 +1,6 @@
 {
   "name": "@5cover/eslint-plugin-content",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "ESLint plugins to enforce the content of your code rather than form",
   "keywords": [
     "eslint",
