@@ -8,7 +8,7 @@
 //------------------------------------------------------------------------------
 
 import requireImport from './rules/require-import.js';
-import pkg from '../package.json';
+import pkg from '../package.json' with { type: 'json' };
 import type { ESLint } from 'eslint';
 
 //------------------------------------------------------------------------------

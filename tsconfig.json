@@ -6,7 +6,6 @@
     "target": "es6",
     "allowJs": true,
     "resolveJsonModule": true,
-    "moduleResolution": "node",
     "moduleDetection": "force",
     "isolatedModules": true,
     "verbatimModuleSyntax": true,
@@ -16,7 +15,7 @@
     "noImplicitOverride": true,
     "noImplicitAny": true,
     // Transpile our TypeScript code to JavaScript
-    "module": "ES2020",
+    "module": "Node18",
     "outDir": "dist",
     // Emit type declarations
     "declaration": true,
@@ -26,8 +25,9 @@
   },
   // Include the necessary files for your project
   "include": [
-    "**/*.ts"
-, "tests/lib/rules/require-import.test.ts"  ],
+    "**/*.ts",
+    "tests/lib/rules/require-import.test.ts"
+  ],
   "exclude": [
     "node_modules",
     "dist",
