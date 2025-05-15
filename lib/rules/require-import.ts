@@ -50,7 +50,10 @@ export default {
             'Program:exit'(programNode) {
                 if (!hasImport) {
                     context.report({
-                        node: programNode,
+                        loc: {
+                            line: 1,
+                            column: 0
+                        },
                         messageId: 'missing',
                         data: { moduleName },
                         fix(fixer) {
