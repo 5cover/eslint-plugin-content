@@ -54,9 +54,10 @@
     "lint": "npm-run-all \"lint:*\"",
     "lint:eslint-docs": "npm-run-all \"update:eslint-docs -- --check\"",
     "lint:ts": "eslint .",
-    "prepublishOnly": "npm run build",
+    "prepare": "tsc",
     "test": "mocha",
-    "update:eslint-docs": "eslint-doc-generator"
+    "update:eslint-docs": "eslint-doc-generator",
+    "postpublish": "node ./scripts/postpublish.js"
   },
   "type": "module",
   "types": "dist/index.d.ts",
