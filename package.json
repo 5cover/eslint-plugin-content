@@ -1,6 +1,37 @@
 {
-  "author": "5cover",
+  "name": "@5cover/eslint-plugin-content",
+  "version": "1.0.5",
+  "private": false,
   "description": "ESLint plugins to enforce the content of your code rather than form",
+  "keywords": [
+    "eslint",
+    "eslintplugin",
+    "eslint-plugin"
+  ],
+  "homepage": "https://github.com/5cover/eslint-plugin-content",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/5cover/eslint-plugin-content.git"
+  },
+  "license": "MIT",
+  "author": "5cover",
+  "type": "module",
+  "exports": "./dist/lib/index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "docs"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "lint": "npm-run-all \"lint:*\"",
+    "lint:eslint-docs": "npm-run-all \"update:eslint-docs -- --check\"",
+    "lint:ts": "eslint .",
+    "prepublishOnly": "npm run build",
+    "test": "mocha",
+    "update:eslint-docs": "eslint-doc-generator"
+  },
   "devDependencies": {
     "@eslint/compat": "^1.2.9",
     "@eslint/js": "^9.26.0",
@@ -24,42 +55,10 @@
     "typescript-eslint": "^8.32.1",
     "url": "^0.11.4"
   },
-  "engines": {
-    "node": "^18.18.0 || ^20.9.0 || >=21.1.0"
-  },
-  "exports": "./dist/lib/index.js",
-  "files": [
-    "dist",
-    "docs"
-  ],
-  "homepage": "https://github.com/5cover/eslint-plugin-content",
-  "keywords": [
-    "eslint",
-    "eslintplugin",
-    "eslint-plugin"
-  ],
-  "license": "MIT",
-  "main": "dist/index.js",
-  "name": "@5cover/eslint-plugin-content",
   "peerDependencies": {
     "eslint": ">=9.0.0"
   },
-  "private": false,
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/5cover/eslint-plugin-content.git"
-  },
-  "scripts": {
-    "build": "tsc",
-    "lint": "npm-run-all \"lint:*\"",
-    "lint:eslint-docs": "npm-run-all \"update:eslint-docs -- --check\"",
-    "lint:ts": "eslint .",
-    "prepare": "tsc",
-    "test": "mocha",
-    "update:eslint-docs": "eslint-doc-generator",
-    "postpublish": "node ./scripts/postpublish.js"
-  },
-  "type": "module",
-  "types": "dist/index.d.ts",
-  "version": "1.1.0"
+  "engines": {
+    "node": "^18.18.0 || ^20.9.0 || >=21.1.0"
+  }
 }
